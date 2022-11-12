@@ -1,19 +1,13 @@
-# revision 33236
-# category Package
-# catalog-ctan /macros/latex/contrib/efbox
-# catalog-date 2014-03-28 17:26:17 +0100
-# catalog-license lppl1.3
-# catalog-version 1.0
 Name:		texlive-efbox
-Version:	1.0
-Release:	5
+Version:	33236
+Release:	1
 Summary:	Extension of \fbox, with controllable frames and colours
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/efbox
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ command optionally puts a (possibly partial) frame around the
 box, and allows setting the box background colour.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,7 +38,8 @@ box, and allows setting the box background colour.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
