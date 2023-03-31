@@ -1,6 +1,6 @@
 Name:		texlive-efbox
 Version:	33236
-Release:	1
+Release:	2
 Summary:	Extension of \fbox, with controllable frames and colours
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/efbox
