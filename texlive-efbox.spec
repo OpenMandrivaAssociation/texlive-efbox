@@ -3,7 +3,7 @@ Version:	33236
 Release:	2
 Summary:	Extension of \fbox, with controllable frames and colours
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/efbox
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/efbox
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/efbox.doc.r%{version}.tar.xz
